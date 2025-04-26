@@ -10,8 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "modern-normalize": "^3.0.1",
+    "normalize.css": "^8.0.1",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "ress": "^5.0.2",
+    "sanitize.css": "^13.0.0"
   },
   "devDependencies": {
     "@types/react": "^19.0.10",

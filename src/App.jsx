@@ -1,31 +1,66 @@
-import { useState } from 'react'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useCallback, Fragment } from 'react'
+import normalizeCssUrl from "normalize.css/normalize.css?url"
+import modernNormalizeUrl from "modern-normalize/modern-normalize.css?url"
+import sanitizeCssUrl from "sanitize.css/sanitize.css?url"
+import ressUrl from "ress/ress.css?url"
 
-function App() {
-  const [count, setCount] = useState(0)
+const cssList = [
+  {
+    id: "default",
+    name: "Default",
+    url: undefined
+  },
+  {
+    id: "normalize_css",
+    name: "Normalize.css",
+    url: normalizeCssUrl
+  },
+  {
+    id: "modern_normalize",
+    name: "modern-normalize",
+    url: modernNormalizeUrl
+  },
+  {
+    id: "sanitize_css",
+    name: "sanitize.css",
+    url: sanitizeCssUrl
+  },
+  {
+    id: "ress",
+    name: "ress",
+    url: ressUrl
+  },
+]
+
+const LINK_ELEM_ID = "selectedCss"
+
+const updateLinkElem = (url) => {
+  const linkElem = document.querySelector(`link#${LINK_ELEM_ID}`);
+      
+  linkElem.href = url ?? "#";
+}
+
+export const App = () => {
+  const selectCss = useCallback((cssId) => {
+    const css = cssList.find(css => css.id === cssId);
+    updateLinkElem(css.url)
+  }, [])
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <fieldset className="css-selector">
+        <legend>CSS</legend>
+        <div>
+          {cssList.map((css) => (
+            <Fragment key={css.id}>
+              <input type="radio" id={css.id} name="css" value={css.id} onClick={() => {
+                selectCss(css.id)
+              }} defaultChecked={css.id === "default"}/>
+              <label htmlFor={css.id}>{css.name}</label><br />
+            </Fragment>
+          ))}
+        </div>
+      </fieldset>
     </>
   )
 }
-
-export default App

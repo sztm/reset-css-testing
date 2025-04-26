@@ -8,12 +8,24 @@ importers:
 
   .:
     dependencies:
+      modern-normalize:
+        specifier: ^3.0.1
+        version: 3.0.1
+      normalize.css:
+        specifier: ^8.0.1
+        version: 8.0.1
       react:
         specifier: ^19.0.0
         version: 19.1.0
       react-dom:
         specifier: ^19.0.0
         version: 19.1.0(react@19.1.0)
+      ress:
+        specifier: ^5.0.2
+        version: 5.0.2
+      sanitize.css:
+        specifier: ^13.0.0
+        version: 13.0.0
     devDependencies:
       '@types/react':
         specifier: ^19.0.10
@@ -392,10 +404,17 @@ packages:
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
 
+  modern-normalize@3.0.1:
+    resolution: {integrity: sha512-VqlMdYi59Uch6fnUPxnpijWUQe+TW6zeWCvyr6Mb7JibheHzSuAAoJi2c71ZwIaWKpECpGpYHoaaBp6rBRr+/g==}
+    engines: {node: '>=6'}
+
   nanoid@3.3.11:
     resolution: {integrity: sha512-N8SpfPUnUp1bK+PMYW8qSWdl9U+wwNWI4QKxOYDy9JAro3WMX7p2OeVRF9v+347pnakNevPmiHhNmZ2HbFA76w==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
+
+  normalize.css@8.0.1:
+    resolution: {integrity: sha512-qizSNPO93t1YUuUhP22btGOo3chcvDFqFaj2TRybP0DMxkHOCTYwp3n34fel4a31ORXy4m1Xq0Gyqpb5m33qIg==}
 
   picocolors@1.1.1:
     resolution: {integrity: sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==}
@@ -417,10 +436,16 @@ packages:
     resolution: {integrity: sha512-FS+XFBNvn3GTAWq26joslQgWNoFu08F4kl0J4CgdNKADkdSGXQyTCnKteIAJy96Br6YbpEU1LSzV5dYtjMkMDg==}
     engines: {node: '>=0.10.0'}
 
+  ress@5.0.2:
+    resolution: {integrity: sha512-oHBtOWo/Uc8SzQMbQNIKTcgi8wKmAs7IlNlRywmXudbOtF+c27FlOIq7tnwLDVcTywe6JXYo1pDXHO6kABwNYA==}
+
   rollup@4.40.0:
     resolution: {integrity: sha512-Noe455xmA96nnqH5piFtLobsGbCij7Tu+tb3c1vYjNbTkfzGqXqQXG3wJaYXkRZuQ0vEYN4bhwg7QnIrqB5B+w==}
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
+
+  sanitize.css@13.0.0:
+    resolution: {integrity: sha512-ZRwKbh/eQ6w9vmTjkuG0Ioi3HBwPFce0O+v//ve+aOq1oeCy7jMV2qzzAlpsNuqpqCBjjriM1lbtZbF/Q8jVyA==}
 
   scheduler@0.26.0:
     resolution: {integrity: sha512-NlHwttCI/l5gCPR3D1nNXtWABUmBwvZpEQiD4IXSbIDq8BzLIK/7Ir5gTFSGZDUu37K5cMNp0hFtzO38sC7gWA==}
@@ -716,7 +741,11 @@ snapshots:
   fsevents@2.3.3:
     optional: true
 
+  modern-normalize@3.0.1: {}
+
   nanoid@3.3.11: {}
+
+  normalize.css@8.0.1: {}
 
   picocolors@1.1.1: {}
 
@@ -734,6 +763,8 @@ snapshots:
       scheduler: 0.26.0
 
   react@19.1.0: {}
+
+  ress@5.0.2: {}
 
   rollup@4.40.0:
     dependencies:
@@ -760,6 +791,8 @@ snapshots:
       '@rollup/rollup-win32-ia32-msvc': 4.40.0
       '@rollup/rollup-win32-x64-msvc': 4.40.0
       fsevents: 2.3.3
+
+  sanitize.css@13.0.0: {}
 
   scheduler@0.26.0: {}
 
