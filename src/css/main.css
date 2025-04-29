@@ -1,0 +1,7 @@
+@layer normalize;
+
+@layer app {
+  :where(a) {
+    text-underline-offset: 0.2ex;
+  }
+}
