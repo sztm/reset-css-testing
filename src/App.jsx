@@ -57,14 +57,15 @@ export const App = () => {
       <fieldset className="css-selector">
         <legend>CSS</legend>
         <div>
-          {cssList.map((css) => (
-            <Fragment key={css.id}>
-              <input type="radio" id={css.id} name="css" value={css.id} onClick={() => {
-                selectCss(css.id)
-              }} defaultChecked={css.id === "default"}/>
-              <label htmlFor={css.id}>{css.name}</label><br />
-            </Fragment>
-          ))}
+          <select name="normalize_css" id="normalize_css" onChange={(e) => {
+            selectCss(e.target.value)
+          }}>
+            {cssList.map((css) => (
+              <option value={css.id} key={css.id} defaultChecked={css.id === "default"}>
+                {css.name}
+              </option>
+            ))}
+          </select>
         </div>
       </fieldset>
     </>
