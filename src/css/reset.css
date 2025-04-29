@@ -1,0 +1,5 @@
+@layer reset {
+  :where(html) {
+    font-family: sans-serif;
+  }
+}

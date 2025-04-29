@@ -1,8 +1,9 @@
 import { useCallback, Fragment } from 'react'
-import normalizeCssUrl from "normalize.css/normalize.css?url"
-import modernNormalizeUrl from "modern-normalize/modern-normalize.css?url"
-import sanitizeCssUrl from "sanitize.css/sanitize.css?url"
-import ressUrl from "ress/ress.css?url"
+import normalizeCssUrl from "./css/normalize.css?url"
+import modernNormalizeUrl from "./css/modern-normalize.css?url"
+import sanitizeCssUrl from "./css/sanitize.css?url"
+import ressUrl from "./css/ress.css?url"
+import myResetCssUrl from "./css/reset.css?url"
 
 const cssList = [
   {
@@ -29,6 +30,11 @@ const cssList = [
     id: "ress",
     name: "ress",
     url: ressUrl
+  },
+  {
+    id: "my_reset",
+    name: "My reset CSS",
+    url: myResetCssUrl
   },
 ]
 

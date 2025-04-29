@@ -1,0 +1,7 @@
+@import "sanitize.css/sanitize.css" layer(normalize);
+
+@layer normalize {
+  :where(button, input, optgroup, select, textarea) {
+    background-repeat: revert;
+  }
+}
