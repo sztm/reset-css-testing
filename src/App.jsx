@@ -3,6 +3,7 @@ import normalizeCssUrl from "./css/normalize.css?url"
 import modernNormalizeUrl from "./css/modern-normalize.css?url"
 import sanitizeCssUrl from "./css/sanitize.css?url"
 import ressUrl from "./css/ress.css?url"
+import uaplusUrl from "./css/uaplus.css?url"
 import myResetCssUrl from "./css/reset.css?url"
 
 const cssList = [
@@ -30,6 +31,11 @@ const cssList = [
     id: "ress",
     name: "ress",
     url: ressUrl
+  },
+  {
+    id: "uaplus",
+    name: "uaplus",
+    url: uaplusUrl
   },
   {
     id: "my_reset",
